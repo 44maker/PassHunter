@@ -46,7 +46,7 @@ void check_file_for_password(char* filename, char users[1024][32], int user_coun
 
     char line[256];
     regex_t regex;
-    regcomp(&regex, "password|pass|p@ss|p@ssword", REG_EXTENDED | REG_ICASE);
+    regcomp(&regex, "password|pass|p@ss|p@ssword|passwd|p@asswd", REG_EXTENDED | REG_ICASE);
 
     while (fgets(line, sizeof(line), file)) {
         for (int i = 0; i < user_count; i++) {
